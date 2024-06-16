@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 
 import store from "./store";
-import {deposit} from "./features/account/accountSlice";
+import {Provider} from "react-redux";
 
 store.dispatch({type:'account/deposit',payload:100})
 console.log(store.getState())
@@ -12,7 +12,9 @@ console.log(store.getState())
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+      <Provider store={store}>
     <App />
+      </Provider>
   </React.StrictMode>
 );
 
