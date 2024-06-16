@@ -33,7 +33,6 @@ function AccountOperations() {
   }
 
   function handlePayLoan() {
-    if (!loanAmount && !loanPurpose) return
     dispatch(payLoan())
 
 
