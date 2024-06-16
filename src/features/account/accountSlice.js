@@ -45,5 +45,5 @@ export function requestLoan(amount,purpose){
     }
 }
 export function payLoan(){
-    return {type:'account/payLoan',}
+    return {type:'account/payLoan'}
 }
